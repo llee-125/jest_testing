@@ -27,4 +27,10 @@ const power = (num1, num2) => {
   return num1 ** num2;
 };
 
-module.exports = { add, minus, multiply, divide, power };
+const addAsync = (num1, num2) => {
+  return new Promise((resolve, reject) => {
+    resolve(num1 + num2);
+  });
+};
+
+module.exports = { add, minus, multiply, divide, power, addAsync };
